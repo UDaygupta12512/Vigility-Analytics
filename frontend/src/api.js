@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:5000';
+const isLocal = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
+const API_BASE = isLocal ? 'http://localhost:5000' : '';
 
 function getToken() {
     return localStorage.getItem('analytics_token');

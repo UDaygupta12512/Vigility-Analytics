@@ -6,9 +6,10 @@
         "node": "18.x"
     },
     "scripts": {
-        "start": "cd backend && npm start",
-        "build": "cd frontend && npm install && npm run build",
-        "install-backend": "cd backend && npm install",
-        "install-frontend": "cd frontend && npm install"
+        "install:backend": "cd backend && npm install",
+        "install:frontend": "cd frontend && npm install",
+        "build:frontend": "cd frontend && npm run build",
+        "build": "npm run install:backend && npm run install:frontend && npm run build:frontend",
+        "start": "node backend/src/server.js"
     }
 }

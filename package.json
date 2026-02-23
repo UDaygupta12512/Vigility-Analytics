@@ -9,7 +9,8 @@
         "install:backend": "cd backend && npm install",
         "install:frontend": "cd frontend && npm install",
         "build:frontend": "cd frontend && npm run build",
-        "build": "npm run install:backend && npm run install:frontend && npm run build:frontend",
+        "seed": "node backend/src/seed.js",
+        "build": "npm run install:backend && npm run seed && npm run install:frontend && npm run build:frontend",
         "start": "node backend/src/server.js"
     }
 }
